@@ -7,6 +7,7 @@
       "totalReview": 12,
       "status": "Not Ready",
       "roomType": "Grant Marshal",
+      "unitName": "Villa Casandra - 2BR",
       "profileModel": {
         "id": "1",
         "userName": "Cleo Kimberly",
@@ -21,7 +22,7 @@
         "id": "1",
         "hostName": "Rafik Bukit Vista",
         "hostProfileName": "Bayu & Wayan",
-        "hostPropertyUnit": "Villa Casandra - 2BR",
+        "hostPropertyUnit": "ME Villa - B (1BR)",
         "listingName": "4BR Homey Villa in Uluwatu | Kitchen + Wifi + Pool"
       },
       "bookingStatus": "Canceled",
