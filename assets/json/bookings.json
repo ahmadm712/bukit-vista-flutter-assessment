@@ -1,0 +1,32 @@
+{
+  "bookings": [
+    {
+      "id": "HJHAIWE42JK8",
+      "checkInDate": "2022-12-23T08:57:47.812",
+      "checkOutDate": "2022-12-25T08:57:47.812",
+      "totalReview": 12,
+      "status": "Not Ready",
+      "roomType": "Grant Marshal",
+      "profileModel": {
+        "id": "1",
+        "userName": "Cleo Kimberly",
+        "profileStatus": "repeated",
+        "imageUrl": "https://i0.wp.com/global.ac.id/wp-content/uploads/2014/10/speaker-2-v2.jpg?fit=768%2C768&ssl=1",
+        "location": "Melbourne, Australia",
+        "note": "",
+        "journeyStatus": [],
+        "phoneNumber": "082123892893"
+      },
+      "hostModel": {
+        "id": "1",
+        "hostName": "Rafik Bukit Vista",
+        "hostProfileName": "Bayu & Wayan",
+        "hostPropertyUnit": "Villa Casandra - 2BR",
+        "listingName": "4BR Homey Villa in Uluwatu | Kitchen + Wifi + Pool"
+      },
+      "bookingStatus": "Canceled",
+      "totalGuest": 2,
+      "bookingValue": 12000000
+    }
+  ]
+}
