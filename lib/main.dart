@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         title: 'Bukit Vista',
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           colorScheme:
               ColorScheme.fromSwatch().copyWith(primary: kColorPrimary),
