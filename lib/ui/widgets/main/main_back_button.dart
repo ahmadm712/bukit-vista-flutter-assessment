@@ -6,7 +6,7 @@ class MainBackButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 24),
+      padding: const EdgeInsets.only(left: 16),
       child: IconButton(
         color: Colors.white,
         icon: const Icon(Icons.arrow_back_ios),
