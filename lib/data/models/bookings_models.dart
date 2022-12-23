@@ -27,19 +27,20 @@ class BookingsModel {
 }
 
 class Booking {
-  Booking({
-    this.id,
-    this.checkInDate,
-    this.checkOutDate,
-    this.totalReview,
-    this.status,
-    this.roomType,
-    this.profileModel,
-    this.hostModel,
-    this.bookingStatus,
-    this.totalBooking,
-    this.bookingValue,
-  });
+  Booking(
+      {this.id,
+      this.checkInDate,
+      this.checkOutDate,
+      this.totalReview,
+      this.status,
+      this.roomType,
+      this.profileModel,
+      this.hostModel,
+      this.bookingStatus,
+      this.totalBooking,
+      this.bookingValue,
+      this.unitName,
+      this.totalGuest});
 
   String? id;
   String? checkInDate;
@@ -50,7 +51,9 @@ class Booking {
   ProfileModel? profileModel;
   HostModel? hostModel;
   String? bookingStatus;
+  String? unitName;
   int? totalBooking;
+  int? totalGuest;
   int? bookingValue;
 
   factory Booking.fromJson(Map<String, dynamic> json) => Booking(
@@ -65,6 +68,8 @@ class Booking {
         bookingStatus: json["bookingStatus"],
         totalBooking: json["totalBooking"],
         bookingValue: json["bookingValue"],
+        totalGuest: json['totalGuest'],
+        unitName: json['unitName'],
       );
 
   Map<String, dynamic> toJson() => {
@@ -132,7 +137,7 @@ class ProfileModel {
   String? imageUrl;
   String? location;
   String? note;
-  List<dynamic>? journeyStatus;
+  List<String>? journeyStatus;
   String? phoneNumber;
 
   factory ProfileModel.fromJson(Map<String, dynamic> json) => ProfileModel(
@@ -142,7 +147,7 @@ class ProfileModel {
         imageUrl: json["imageUrl"],
         location: json["location"],
         note: json["note"],
-        journeyStatus: List<dynamic>.from(json["journeyStatus"].map((x) => x)),
+        journeyStatus: List<String>.from(json["journeyStatus"].map((x) => x)),
         phoneNumber: json["phoneNumber"],
       );
 
