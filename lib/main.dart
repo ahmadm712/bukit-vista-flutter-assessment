@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:test_bukit_vista/services/main_services.dart';
+import 'package:test_bukit_vista/ui/cubit/booking/booking_cubit.dart';
 import 'package:test_bukit_vista/ui/pages/pages.dart';
+import 'package:test_bukit_vista/utils/routes.dart';
 import 'package:test_bukit_vista/utils/styles.dart';
 
 void main() {
@@ -12,12 +16,22 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Bukit Vista',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSwatch().copyWith(primary: kColorPrimary),
+    MainServices mainServices = MainServices();
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => BookingCubit(mainServices),
+        )
+      ],
+      child: MaterialApp(
+        title: 'Bukit Vista',
+        theme: ThemeData(
+          colorScheme:
+              ColorScheme.fromSwatch().copyWith(primary: kColorPrimary),
+        ),
+        home: const HomePage(),
+        onGenerateRoute: mainRoutes,
       ),
-      home: const HomePage(),
     );
   }
 }
